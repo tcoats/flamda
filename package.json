@@ -1,0 +1,22 @@
+{
+  "name": "flamda",
+  "version": "0.1.0",
+  "description": "ƒ",
+  "main": "ƒ.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcoats/flamda.git"
+  },
+  "keywords": [
+    "functional"
+  ],
+  "author": "Thomas Coats <github@voodoolabs.net>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcoats/flamda/issues"
+  },
+  "homepage": "https://github.com/tcoats/flamda#readme"
+}
