@@ -65,7 +65,7 @@ _pipe = (f, g) -> -> g.call @, f.apply @, arguments
 
 # Flow
 ƒ.pipe = (first, args...) ->
-  ƒ _arity args.length + 1,
+  ƒ _arity first.length,
     ƒ.reduce ((f, g) -> -> g.call @, f.apply @, arguments),
       first,
       args

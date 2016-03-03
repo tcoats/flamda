@@ -201,7 +201,7 @@ _pipe = function(f, g) {
 ƒ.pipe = function() {
   var args, first;
   first = arguments[0], args = 2 <= arguments.length ? slice.call(arguments, 1) : [];
-  return ƒ(_arity(args.length + 1, ƒ.reduce((function(f, g) {
+  return ƒ(_arity(first.length, ƒ.reduce((function(f, g) {
     return function() {
       return g.call(this, f.apply(this, arguments));
     };
