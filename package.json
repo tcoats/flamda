@@ -2,7 +2,7 @@
   "name": "flamda",
   "version": "0.1.1",
   "description": "ƒ",
-  "main": "ƒ.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
