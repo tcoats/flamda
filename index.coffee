@@ -62,6 +62,27 @@ _pipe = (f, g) -> -> g.call @, f.apply @, arguments
 ƒ.pluck = (prop) -> ƒ.map ƒ.prop prop
 ƒ.aperture = ƒ (n, list) ->
   ƒ.slice list, i, i + n for i in [0...list.length - (n - 1)]
+ƒ.sort = ƒ (fn, list) -> list.slice(0).sort fn
+ƒ.asc = ƒ (fn, list) ->
+  sort = ƒ.sort (a, b) ->
+    fa = fn a
+    fb = fn b
+    return 1 if fa > fb
+    return -1 if fa < fb
+    0
+  sort list
+ƒ.desc = ƒ (fn, list) ->
+  sort = ƒ.sort (a, b) ->
+    fa = fn a
+    fb = fn b
+    return 1 if fa < fb
+    return -1 if fa > fb
+    0
+  sort list
+ƒ.find = ƒ (fn, list) ->
+  for item in list
+    return item if fn item
+  undefined
 
 # Flow
 ƒ.pipe = (first, args...) ->
@@ -90,6 +111,7 @@ _pipe = (f, g) -> -> g.call @, f.apply @, arguments
 
 # Object
 ƒ.prop = ƒ (prop, obj) -> obj[prop]
+ƒ.propEq = ƒ (prop, value, obj) -> obj[prop] is value
 ƒ.isEmpty = (obj) -> obj is ''
 ƒ.isNil = (obj) -> !obj?
 ƒ.exists = ƒ.compose ƒ.not, ƒ.either(ƒ.isEmpty, ƒ.isNil), ƒ.prop
