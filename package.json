@@ -18,5 +18,10 @@
   "bugs": {
     "url": "https://github.com/tcoats/flamda/issues"
   },
-  "homepage": "https://github.com/tcoats/flamda#readme"
+  "homepage": "https://github.com/tcoats/flamda#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5"
+  }
 }
